@@ -1,0 +1,40 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
+and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+## [1.1.3] - 2026-04-12
+
+- TMS-1260: Add sr-only text for opening image-blocks modal
+
+## [1.1.2] - 2026-03-16
+
+- TMS-1257: Add info text for category filters
+- TMS-1256: Add min-width for event filter select-elements
+
+## [1.1.1] - 2026-02-24
+
+- TMS-1246: Center image-blocks image more
+
+## [1.1.0] - 2026-02-22
+
+- TMS-1246: Center image-block image
+- TMS-1245: Remove spaces around dash in time & dates for event item
+- TMS-1244: Add modified combined-events-search model
+- TMS-1242: Change hamburger-menu icon color
+- TMS-1239:
+    - Remove related events-section from manual event single page
+    - Change event logo-wall img sizes
+
+## [1.0.0] - 2026-02-16
+
+- TMS-1222:
+    - Tampere biennale theme modified from tms-theme-jazzhappening
+    - Remove Artist & Festival CPTs and templates
+    - Add timeline-component
+    - Add subheading-field for manual-event
+    - Modify right side contents for manual-event

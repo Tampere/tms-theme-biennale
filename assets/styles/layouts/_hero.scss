@@ -1,0 +1,137 @@
+.hero {
+    height: auto !important;
+    position: relative;
+
+    @include from($tablet) {
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -285px;
+            height: 300px;
+            width: 30%;
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+        &::before {
+            left: 0;
+            background-image: url('../images/roots_9.svg');
+            background-position: top left;
+        }
+
+        &::after {
+            right: 0;
+            background-image: url('../images/roots_12.svg');
+            background-position: top right;
+        }
+    }
+
+    @media (min-width: 2200px) {
+        &::before,
+        &::after {
+            bottom: -365px;
+            height: 380px;
+        }
+    }
+
+    @include until($tablet) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &__content {
+        background: linear-gradient(
+            rgba($black, 0) 0%,
+            rgba($black, .5) 50%
+        );
+        padding: $theme-spacing-two $theme-spacing-half;
+
+        @include until($tablet) {
+            padding: $theme-spacing-two;
+        }
+    }
+
+    &__carousel {
+        .splide__arrows {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            top: 50%;
+            z-index: 10;
+
+            .splide__arrow {
+                border: 0;
+                background: transparent;
+                cursor: pointer;
+
+                svg {
+                    fill: $white;
+                    stroke: $primary;
+                    stroke-width: 2px;
+
+                    @include until($tablet) {
+                        height: 30px;
+                        width: 30px;
+                    }
+                }
+
+                &--prev svg {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+
+        &__item {
+            position: relative;
+            height: 65vh;
+            background-size: cover;
+            background-position: top center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+
+            img {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: top center;
+                z-index: -1;
+            }
+
+            @include from($tablet) {
+                height: 85vh;
+                min-height: 500px;
+                max-height: 800px;
+            }
+
+            @media (min-width: 2200px) {
+                height: 45vw;
+                max-height: none;
+            }
+
+            h2,
+            p {
+                color: $primary-invert;
+                text-shadow: 1px 1px 4px rgba($black, .9);
+            }
+
+            p {
+                font-size: 1.25rem;
+                font-weight: $weight-semibold;
+                max-width: 100%;
+                margin-bottom: 0;
+            }
+
+            .button:focus {
+                outline-color: $white !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.image-block {
+    &__caption {
+        a {
+            text-decoration: underline;
+        }
+
+        * {
+            font-weight: $weight-normal;
+        }
+    }
+
+    .image {
+        .has-modal img {
+            justify-self: center;
+        }
+
+        img {
+            width: auto;
+            max-height: $image-max-height;
+            margin: 0 auto;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.pill {
+    border-width: 2px !important;
+    border-color: $primary !important;
+    background-color: $primary !important;
+    color: $white !important;
+    font-family: $family-primary !important;
+    font-size: 1rem !important;
+    letter-spacing: .06rem;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    font-weight: $weight-bold !important;
+    z-index: 1;
+
+    .icon {
+        fill: currentColor !important;
+        color: inherit !important;
+    }
+
+    &:not(span) {
+        &:hover,
+        &:focus {
+            text-decoration: underline !important;
+            color: $white !important;
+            background-color: $primary !important;
+            border-color: $primary !important;
+        }
+    }
+
+    &.is-active {
+        &:not(span) {
+            &,
+            &:hover,
+            &:focus {
+                background-color: $primary-invert !important;
+                color: $primary !important;
+                border-color: $primary !important;
+            }
+        }
+    }
+}
